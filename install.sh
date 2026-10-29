@@ -11,3 +11,8 @@ link() {
 }
 
 link "$DIR/vscodium/settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
+link "$DIR/vscodium/keybindings.json" "$HOME/Library/Application Support/VSCodium/User/keybindings.json"
+
+if command -v codium >/dev/null; then
+  while read -r ext; do codium --install-extension "$ext"; done < "$DIR/vscodium/extensions.txt"
+fi

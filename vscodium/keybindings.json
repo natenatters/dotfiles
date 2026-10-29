@@ -1,0 +1,37 @@
+[
+    {
+        "key": "cmd+e",
+        "command": "workbench.view.explorer",
+        "when": "!sideBarVisible || activeViewlet != 'workbench.view.explorer'"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.closeSidebar",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+        "when": "!inEditorsPicker && !terminalFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus"
+    }
+]
